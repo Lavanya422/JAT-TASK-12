@@ -13,3 +13,47 @@ INSERT INTO employee (empcode, empname, empage, esalary) VALUES
 (105, 'Shameer', 25, 90000);
 
 SELECT * FROM employee;
+
+
+Java code:
+
+package com.example.jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class InsertEmployeeData {
+
+    public static void main(String[] args) {
+        String jdbcURL = "jdbc:mysql://localhost:3306/mysql12";
+        String username = "root";
+        String password = "Lava@123"; // <-- Replace with your actual password
+
+        Object[][] employees = {
+            {101, "Alice", 28, 55000.0},
+            {102, "Bob", 35, 62000.0},
+            {103, "Charlie", 30, 50000.0}
+        };
+
+        String sql = "INSERT INTO employees (empcode, empname, empage, esalary) VALUES (?, ?, ?, ?)";
+
+        try (Connection connection = DriverManager.getConnection(jdbcURL, username, password);
+             PreparedStatement stmt = connection.prepareStatement(sql)) {
+
+            for (Object[] emp : employees) {
+                stmt.setInt(1, (Integer) emp[0]);
+                stmt.setString(2, (String) emp[1]);
+                stmt.setInt(3, (Integer) emp[2]);
+                stmt.setDouble(4, (Double) emp[3]);
+                stmt.executeUpdate();
+            }
+
+            System.out.println("Data inserted successfully!");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
