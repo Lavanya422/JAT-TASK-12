@@ -1,0 +1,15 @@
+CREATE TABLE employee (
+    empcode INT PRIMARY KEY,
+    empname VARCHAR(50),
+    empage INT,
+    esalary INT
+);
+
+INSERT INTO employee (empcode, empname, empage, esalary) VALUES 
+(101, 'Jenny', 25, 10000),
+(102, 'Jacky', 30, 20000),
+(103, 'Joe', 20, 40000),
+(104, 'John', 40, 80000),
+(105, 'Shameer', 25, 90000);
+
+SELECT * FROM employee;
