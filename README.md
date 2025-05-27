@@ -5,3 +5,6 @@
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/8efd60ba-11f2-4176-b979-f223e69b14f5" />
 <img width="955" alt="image" src="https://github.com/user-attachments/assets/0c1f0965-224f-484c-98c4-13d26babba5e" />
 <img width="957" alt="image" src="https://github.com/user-attachments/assets/2789d63a-b27e-44e4-9224-50c254e07617" />
+12.2 JDBC
+<img width="951" alt="image" src="https://github.com/user-attachments/assets/bf7391dd-1b46-4aa0-a1af-e71320ae5aad" />
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/67d4fce6-4b5c-4fbf-a2e9-3dc41bf307c2" />
